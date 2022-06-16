@@ -49,7 +49,7 @@ jobs:
           command: |
             docker build -t $DOCKER_HUB_USER_ID/$IMAGE_NAME .
             echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
-            docker push $DOCKER_HUB_USER_ID/$IMAGE_NAME:latest    
+            docker push $DOCKER_HUB_USER_ID/$IMAGE_NAME    
 
         
 
