@@ -13,17 +13,17 @@ jobs:
           DATABASE_NAME: myappdb
           DATABASE_USERNAME: postgres
           TEST_DATABASE: myappdb
-          POSTGRES_PASSWORD: postgress
+         
 
       - image: cimg/postgres:14.0
         auth:
           username: $DOCKER_HUB_USER_ID
           password: $DOCKER_HUB_PASSWORD
         environment:
-          POSTGRES_PASSWORD: postgress
+          POSTGRES_PASSWORD: postgres
           POSTGRES_DB: myappdb
           POSTGRES_USER: postgres
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 10
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 15
 
     steps:
       - checkout
