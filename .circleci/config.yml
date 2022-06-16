@@ -13,6 +13,7 @@ jobs:
           DATABASE_NAME: myappdb
           DATABASE_USERNAME: postgres
           TEST_DATABASE: myappdb
+          POSTGRES_PASSWORD: postgres
 
       - image: cimg/postgres:14.0
         auth:
